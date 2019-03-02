@@ -1,4 +1,4 @@
-# Oracle Evente Hub (kafka) producer in Node.js
+# Oracle Event Hub Cloud Service (kafka) producer in Node.js
 
 ## docker build & run
 ```
