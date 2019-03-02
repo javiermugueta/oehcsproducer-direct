@@ -18,9 +18,8 @@ node producer-direct.js
 ```
 docker run -it -e $OEHCS_CONNECTURL -e $OEHCS_CONNECTURL -e $NUM_PARTITIONS -e $MESSAGE -e $DEBUG javiermugueta/oehcsproducer-direct
 ```
-## docker build & run
+## docker build & push
 ```
 docker build -t javiermugueta/oehcsproducer-direct -f .
 docker push javiermugueta/oehcsproducer-direct
-docker run -it -e $OEHCS_CONNECTURL -e $OEHCS_CONNECTURL -e $NUM_PARTITIONS -e $MESSAGE -e $DEBUG javiermugueta/oehcsproducer-direct
 ```
