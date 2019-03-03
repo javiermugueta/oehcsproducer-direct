@@ -46,7 +46,7 @@ while (i >= 0 ){
 function buildmessage (msgin) {
         mylog(msgin)
         var msgout = replaceString(msgin,'#$€NUMBER€$#', randomnum(0, 99999999999999999999))
-        msgout = replaceString(msgout,'#$€STRING€$#', randomstring.generate(50))
+        msgout = replaceString(msgout,'#$€STRING€$#', "\"" + randomstring.generate(50) + "\"")
         var time = (Math.floor(Date.now() / 1000)).toString()
         mylog(time)
         var msgout = replaceString(msgout, '#$€TIMESTAMP€$#', time)
