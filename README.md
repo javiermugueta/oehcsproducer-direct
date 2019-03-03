@@ -1,4 +1,4 @@
-# Oracle Event Hub Cloud Service (kafka) producer in Node.js
+# Oracle Event Hub Cloud Service (kafka) consumer in go
 
 ## k8s deployment
 ```
