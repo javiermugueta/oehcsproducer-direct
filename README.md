@@ -6,9 +6,9 @@
 ```
 export OEHCS_CONNECTURL=
 export TOPIC_NAME=
-export NUM_PARTITIONS=10
-export MESSAGE=<message>
-export DEBUG=0
+export NUM_PARTITIONS=
+export MESSAGE=
+export DEBUG=
 ```
 ### as source code
 ```
@@ -24,7 +24,7 @@ OEHCS_CONNECTURL=[ip1:port,ip2:port,...]
 TOPIC_NAME=[name of topic]
 NUM_PARTITIONS=[num partitions in topic]
 MESSAGE=[a message, if it contains  #$€NUMBER€$#  #$€STRING€$# #$€TIMESTAMP€$# a random number(20), string(50) or timestamp is generated for each message sent to kafka]
-DEBUG=[]
+DEBUG=[1 debug, otherwise nodebug]
 ```
 ### message example
 ```
