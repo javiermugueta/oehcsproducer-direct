@@ -1,5 +1,5 @@
 # Oracle Event Hub Cloud Service (kafka) consumer in go
-
+[![wercker status](https://app.wercker.com/status/a68a56b07d62e3960b029f7b0c956d3a/s/ "wercker status")](https://app.wercker.com/project/byKey/a68a56b07d62e3960b029f7b0c956d3a)
 ## k8s deployment
 ```
 kubectl apply -f oehcsproducer-direct.yaml
