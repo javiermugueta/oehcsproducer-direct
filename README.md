@@ -1,17 +1,14 @@
-# Oracle Event Hub Cloud Service (kafka) consumer in go
+# Oracle Event Hub Cloud Service (kafka) producer
 [![wercker status](https://app.wercker.com/status/a68a56b07d62e3960b029f7b0c956d3a/s/ "wercker status")](https://app.wercker.com/project/byKey/a68a56b07d62e3960b029f7b0c956d3a)
-## k8s deployment
-```
-kubectl apply -f oehcsproducer-direct.yaml
-```
+
 ## test
 ### set env variables
 ```
 export OEHCS_CONNECTURL=
 export TOPIC_NAME=
 export NUM_PARTITIONS=10
-export MESSAGE='{"updateId" : #$€NUMBER€$#,"store" : #$€NUMBER€$#,"section" : #$€NUMBER€$#,"changes" :[{"to" : #$€NUMBER€$#,"timestamp": #$€TIMESTAMP€$#,"items": [{"productCode": #$€NUMBER€$#,"model": #$€STRING€$#,"quality": #$€STRING€$#,"color": #$€STRING€$#,"size": #$€NUMBER€$#,"serialNumber": #$€NUMBER€$#},{"productCode": #$€NUMBER€$#,"model": #$€NUMBER€$#,"quality": #$€NUMBER€$#,"color": #$€NUMBER€$#,"size": #$€NUMBER€$#,"serialNumber": #$€NUMBER€$#}]},{"to": #$€NUMBER€$#,"timestamp": #$€TIMESTAMP€$#,"items": [{"productCode":#$€NUMBER€$#,"model":#$€NUMBER€$#,"quality":#$€NUMBER€$#,"color":#$€NUMBER€$#,"size":#$€NUMBER€$#,"serialNumber": #$€NUMBER€$#}]}]}'
-export DEBUG=1
+export MESSAGE=<message>
+export DEBUG=0
 ```
 ### as source code
 ```
@@ -21,8 +18,17 @@ node producer-direct.js
 ```
 docker run -it -e OEHCS_CONNECTURL=$OEHCS_CONNECTURL -e TOPIC_NAME=$TOPIC_NAME -e NUM_PARTITIONS=$NUM_PARTITIONS -e MESSAGE=$MESSAGE -e DEBUG=$DEBUG javiermugueta/oehcsproducer-direct
 ```
-## docker build & push
+## params
 ```
-docker build -t javiermugueta/oehcsproducer-direct -f .
-docker push javiermugueta/oehcsproducer-direct
+OEHCS_CONNECTURL=[ip1:port,ip2:port,...]
+TOPIC_NAME=[name of topic]
+NUM_PARTITIONS=[num partitions in topic]
+MESSAGE=[a message, if it contains  #$€NUMBER€$#  #$€STRING€$# #$€TIMESTAMP€$# a random number(20), string(50) or timestamp is generated for each message sent to kafka]
+DEBUG=[]
 ```
+### message example
+```
+'{"updateId" : #$€NUMBER€$#,"store" : #$€NUMBER€$#,"section" : #$€NUMBER€$#,"changes" :[{"to" : #$€NUMBER€$#,"timestamp": #$€TIMESTAMP€$#,"items": [{"productCode": #$€NUMBER€$#,"model": #$€STRING€$#,"quality": #$€STRING€$#,"color": #$€STRING€$#,"size": #$€NUMBER€$#,"serialNumber": #$€NUMBER€$#},{"productCode": #$€NUMBER€$#,"model": #$€NUMBER€$#,"quality": #$€NUMBER€$#,"color": #$€NUMBER€$#,"size": #$€NUMBER€$#,"serialNumber": #$€NUMBER€$#}]},{"to": #$€NUMBER€$#,"timestamp": #$€TIMESTAMP€$#,"items": [{"productCode":#$€NUMBER€$#,"model":#$€NUMBER€$#,"quality":#$€NUMBER€$#,"color":#$€NUMBER€$#,"size":#$€NUMBER€$#,"serialNumber": #$€NUMBER€$#}]}]}'
+```
+
+
