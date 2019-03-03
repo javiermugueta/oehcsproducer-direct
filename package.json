@@ -1,0 +1,38 @@
+{
+  "name": "oehcsproducer-direct",
+  "version": "1.0.0",
+  "main": "producer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "javier mugueta",
+  "license": "ISC",
+  "description": "## docker build & run ``` docker build -t javiermugueta/oehcsproducer-direct -f . docker push javiermugueta/oehcsproducer-direct docker run -it javiermugueta/oehcsproducer-direct ```",
+  "dependencies": {
+    "async": "^2.6.2",
+    "infinite-loop": "^0.2.2",
+    "kafka-node": "^4.0.0",
+    "pino": "^5.11.1",
+    "random-int": "^1.0.0",
+    "randomint": "^1.0.0",
+    "randomstring": "^1.1.5",
+    "replace-string": "^2.0.0",
+    "semaphore": "^1.1.0",
+    "sleep": "^5.2.4",
+    "system-sleep": "^1.3.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javiermugueta/oehcsproducer-direct.git"
+  },
+  "keywords": [
+    "oehcs",
+    "kafka",
+    "oracle",
+    "producer"
+  ],
+  "bugs": {
+    "url": "https://github.com/javiermugueta/oehcsproducer-direct/issues"
+  },
+  "homepage": "https://github.com/javiermugueta/oehcsproducer-direct#readme"
+}
