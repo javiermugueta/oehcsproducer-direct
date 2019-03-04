@@ -7,7 +7,7 @@
   },
   "author": "javier mugueta",
   "license": "ISC",
-  "description": "## docker build & run ``` docker build -t javiermugueta/oehcsproducer-direct -f . docker push javiermugueta/oehcsproducer-direct docker run -it javiermugueta/oehcsproducer-direct ```",
+  "description": "",
   "dependencies": {
     "async": "^2.6.2",
     "infinite-loop": "^0.2.2",
