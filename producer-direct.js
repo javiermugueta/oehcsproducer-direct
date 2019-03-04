@@ -32,13 +32,18 @@ while (i >= 0 ){
                                 console.log(msg);
                         }
                         j = j + 1;
+                        mylog(msg);
                 });
-        //    });
-        i = i + 1;
-        if (i > num_partitions -1){
-                i = 0;
-                sleep( 1 );
-        }
+                i = i + 1;
+                if (i > num_partitions -1){
+                        i = 0;
+                        sleep( 1 );
+                }
+            //});
+        /*producer.on('error', function (err, data) {
+                console.log(err)
+          }  );*/
+
 }
 /*
 * generate a random message if it contains #$€NUMBER€$#, #$€STRING€$# or #$€TIMESTAM€$# literals
@@ -54,7 +59,7 @@ function buildmessage (msgin) {
         return msgout
 }
 /*
-* generates rendom num returned an an string
+* generates random num returned an an string
 */
 function randomnum(low, high) {
         return randomInt(low, high).toString()

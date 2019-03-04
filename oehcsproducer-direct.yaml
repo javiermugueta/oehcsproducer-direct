@@ -5,7 +5,7 @@ metadata:
   labels:
     app: oehcsproducer-direct
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
       app: oehcsproducer-direct
@@ -22,7 +22,7 @@ spec:
         - name: OEHCS_CONNECTURL
           value: "130.61.86.204:6667,130.61.113.170:6667,130.61.47.254:6667,130.61.112.70:6667,130.61.87.248:6667"
         - name: TOPIC_NAME
-          value: "MAINSTREAM1"
+          value: "MAINSTREAM10"
         - name: NUM_PARTITIONS
           value: "10"
 #        - name: DEBUG
