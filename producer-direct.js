@@ -46,15 +46,15 @@ while (i >= 0 ){
 
 }
 /*
-* generate a random message if it contains #$€NUMBER€$#, #$€STRING€$# or #$€TIMESTAM€$# literals
+* generate a random message if it contains #$!NUMBER!$#, #$!STRING!$# or #$!TIMESTAM!$# literals
 */
 function buildmessage (msgin) {
         mylog(msgin)
-        var msgout = replaceString(msgin,'#$€NUMBER€$#', randomnum(0, 99999999999999999999))
-        msgout = replaceString(msgout,'#$€STRING€$#', "\"" + randomstring.generate(50) + "\"")
+        var msgout = replaceString(msgin,'#$!NUMBER!$#', randomnum(0, 99999999999999999999))
+        msgout = replaceString(msgout,'#$!STRING!$#', "\"" + randomstring.generate(50) + "\"")
         var time = (Math.floor(Date.now() / 1000)).toString()
         mylog(time)
-        var msgout = replaceString(msgout, '#$€TIMESTAMP€$#', time)
+        var msgout = replaceString(msgout, '#$!TIMESTAMP!$#', time)
         mylog(msg)
         return msgout
 }

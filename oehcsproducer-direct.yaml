@@ -20,13 +20,13 @@ spec:
       - image: javiermugueta/oehcsproducer-direct
         env:
         - name: OEHCS_CONNECTURL
-          value: "130.61.86.204:6667,130.61.113.170:6667,130.61.47.254:6667,130.61.112.70:6667,130.61.87.248:6667"
+          value: "130.61.119.35:6667,130.61.87.49:6667,130.61.37.234:6667,.37.78:6667,130.61.32.163:6667"
         - name: TOPIC_NAME
-          value: "MAINSTREAM10"
+          value: "MAINSTREAM20"
         - name: NUM_PARTITIONS
-          value: "10"
+          value: "20"
 #        - name: DEBUG
 #          value: "1"
         - name: MESSAGE
-          value: "{\"updateId\" : NUMBER,\"store\" : NUMBER,\"section\" : NUMBER,\"changes\" :[{\"to\" : NUMBER,\"timestamp\": TIMESTAMP,\"items\": [{\"productCode\": NUMBER,\"model\": STRING,\"quality\": STRING,\"color\": STRING,\"size\": NUMBER,\"serialNumber\": NUMBER},{\"productCode\": NUMBER,\"model\": STRING,\"quality\": STRING,\"color\": STRING,\"size\": NUMBER,\"serialNumber\": NUMBER}]},{\"to\": NUMBER,\"timestamp\": TIMESTAMP,\"items\": [{\"productCode\": NUMBER,\"model\": STRING,\"quality\": STRING,\"color\": STRING,\"size\": NUMBER,\"serialNumber\": NUMBER}]}]}"
+          value: "{\"updateId\" : #$!NUMBER!$#,\"store\" : #$!NUMBER!$#,\"section\" : #$!NUMBER!$#,\"changes\" :[{\"to\" : #$!NUMBER!$#,\"timestamp\": #$!TIMESTAMP!$#,\"items\": [{\"productCode\": #$!NUMBER!$#,\"model\": #$!STRING!$#,\"quality\": #$!STRING!$#,\"color\": #$!STRING!$#,\"size\": #$!NUMBER!$#,\"serialNumber\": #$!NUMBER!$#},{\"productCode\": #$!NUMBER!$#,\"model\": #$!NUMBER!$#,\"quality\": #$!NUMBER!$#,\"color\": #$!NUMBER!$#,\"size\": #$!NUMBER!$#,\"serialNumber\": #$!NUMBER!$#}]},{\"to\": #$!NUMBER!$#,\"timestamp\": #$!TIMESTAMP!$#,\"items\": [{\"productCode\":#$!NUMBER!$#,\"model\":#$!NUMBER!$#,\"quality\":#$!NUMBER!$#,\"color\":#$!NUMBER!$#,\"size\":#$!NUMBER!$#,\"serialNumber\": #$!NUMBER!$#}]}]}"
         name: oehcsproducer-direct
